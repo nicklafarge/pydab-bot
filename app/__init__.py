@@ -14,8 +14,8 @@ def create_app(config_name):
         # rendering text
         return 'Hello World'
 
-    @app.route("/dabbot/", methods=["POST"])
-    def home():
+    @app.route("/dabbot/", methods=["POST", "GET"])
+    def dabbot():
         """Webhook for slack"""
         # rendering text
         return 'dab dab dab dab dab'
