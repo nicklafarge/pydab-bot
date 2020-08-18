@@ -8,7 +8,7 @@ import time
 import json
 import os
 
-SLACK_BOT_TOKEN = os.environ['API_KEY']
+SLACK_BOT_TOKEN = os.environ['API_TOKEN']
 
 class ReactionType:
     ONLY_MENTIONS = 0
