@@ -6,9 +6,9 @@ import certifi
 import logging
 import time
 import json
+import os
 
-SLACK_BOT_TOKEN = 'xoxb-104585340695-1331671864672-frlE2ANOYQ3JfLZiv1pAtPJf'
-
+SLACK_BOT_TOKEN = os.environ['API_KEY']
 
 class ReactionType:
     ONLY_MENTIONS = 0
