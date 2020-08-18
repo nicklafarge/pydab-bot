@@ -1,6 +1,7 @@
 from flask_api import FlaskAPI
 from config.env import app_env
 from app.utils.slackhelper import SlackHelper
+from flask import request, jsonify
 
 
 def create_app(config_name):
@@ -18,6 +19,8 @@ def create_app(config_name):
     def dabbot():
         """Webhook for slack"""
         # rendering text
-        return 'dab dab dab dab dab'
+        return dict(
+            challenge=request.data['challenge']
+        )
 
     return app
