@@ -1,4 +1,5 @@
 import slack
+from slack.errors import SlackApiError
 from datetime import datetime
 import ssl as ssl_lib
 import certifi
@@ -6,8 +7,7 @@ import logging
 import time
 import json
 
-# SLACK_BOT_TOCKEN = 'xoxp-104585340695-232007719184-776157101776-20a2e37ab75cf498ce8dc4b58ec22f31'
-SLACK_BOT_TOKEN = 'xoxb-104585340695-1331671864672-UG9n2l0MrGdkddcIwF9YQqaP'
+SLACK_BOT_TOKEN = 'xoxb-104585340695-1331671864672-frlE2ANOYQ3JfLZiv1pAtPJf'
 
 
 class ReactionType:
@@ -70,7 +70,7 @@ except:
 
 ssl_context = ssl_lib.create_default_context(cafile=certifi.where())
 client = slack.WebClient(SLACK_BOT_TOKEN, ssl=ssl_context)
-channels = client.conversations_list().data['channels']
+channels = client.conversations_list(types='public_channel, private_channel').data['channels']
 
 
 def text_in_msg(msg, text):
@@ -112,18 +112,20 @@ def msg_from_user(msg, user):
 def add_user_reaction(channel, msg, user):
     return add_reaction(channel, msg, user.emoji)
 
-
 def add_reaction(channel, msg, emoji):
     if 'reactions' in msg:
         existing_reactions = [r for r in msg['reactions'] if r['name'] == user.emoji]
         if existing_reactions:
             return
 
-    client.reactions_add(
-        name=emoji,
-        channel=channel['id'],
-        timestamp=msg['ts']
-    )
+    try:
+        client.reactions_add(
+            name=emoji,
+            channel=channel['id'],
+            timestamp=msg['ts']
+        )
+    except SlackApiError as sae:
+        pass
 
 
 def send_message(channel, text, trigger_ts):
@@ -161,7 +163,7 @@ try:
     channels_list = [test]
 
     for c in channels_list:
-        history = client.channels_history(channel=c['id']).data
+        history = client.conversations_history(channel=c['id']).data
 
         bot_history = [msg for msg in history['messages'] if 'bot_id' in msg]
         # clear_channel(c, bot_history)
@@ -188,7 +190,7 @@ try:
                         elif msg_trigger.trigger_type == TriggerType.REACTION:
                             add_reaction(c, msg, msg_trigger.response)
 
-except Exception as e:
+except ValueError as e:
     logging.error(e)
     pass
 
