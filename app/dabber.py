@@ -38,7 +38,7 @@ def dab_message_response(request):
 
         if user.reaction_type == ReactionType.ALL or user.reaction_type == ReactionType.ONLY_FROM_USER:
             if sh.msg_from_user(request, user):
-                sh.add_user_reaction(channel, request['item']['ts'], user)
+                sh.add_user_reaction(channel, request['ts'], user)
 
     for msg_trigger in message_triggers:
         for trigger in msg_trigger.triggers:
@@ -46,7 +46,7 @@ def dab_message_response(request):
                 if msg_trigger.trigger_type == TriggerType.MESSAGE:
                     sh.send_message(channel, msg_trigger.response)
                 elif msg_trigger.trigger_type == TriggerType.REACTION:
-                    sh.add_reaction(channel, request['item']['ts'], msg_trigger.response)
+                    sh.add_reaction(channel, request['ts'], msg_trigger.response)
 
 
 def dab_add_to_emoji(request):
