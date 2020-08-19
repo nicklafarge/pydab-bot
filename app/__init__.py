@@ -15,9 +15,10 @@ def create_app(config_name):
         # rendering text
         return 'Hello World'
 
-    @app.route("/dabbot/", methods=["POST", "GET"])
+    @app.route("/dabbot/", methods=["POST"])
     def dabbot():
         """Webhook for slack"""
+        print(request.data)
         # rendering text
         return dict(
             challenge=request.data['challenge']
