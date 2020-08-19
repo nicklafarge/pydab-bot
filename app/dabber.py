@@ -34,7 +34,7 @@ def dab_message_response(request):
     for user in users:
         if user.reaction_type == ReactionType.ALL or user.reaction_type == ReactionType.ONLY_MENTIONS:
             if sh.name_or_mention_in_msg(request, user):
-                sh.add_user_reaction(channel, request, user)
+                sh.add_user_reaction(channel, request['ts'], user)
 
         if user.reaction_type == ReactionType.ALL or user.reaction_type == ReactionType.ONLY_FROM_USER:
             if sh.msg_from_user(request, user):

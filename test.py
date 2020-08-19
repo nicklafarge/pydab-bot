@@ -33,7 +33,18 @@ reaction_added_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id': 'T32H7A0L
                        'type': 'event_callback', 'event_id': 'Ev01945ANCM8', 'event_time': 1597844233,
                        'authed_users': ['U019RKRREKS']}
 
-payload = dab_reaction_test
+name_reaction_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id': 'T32H7A0LF', 'api_app_id': 'ANU4DL7EC',
+                      'event': {'client_msg_id': 'eb9ca07f-321e-4967-bc8d-1539807dfcc2', 'type': 'message',
+                                'text': 'shit no dag for k dawg', 'user': 'U6U07M55E', 'ts': '1597845654.035000',
+                                'team': 'T32H7A0LF', 'blocks': [{'type': 'rich_text', 'block_id': 'mFG', 'elements': [
+                              {'type': 'rich_text_section',
+                               'elements': [{'type': 'text', 'text': 'shit no dag for k dawg'}]}]}],
+                                'channel': 'C019MGFAXS4', 'event_ts': '1597845654.035000', 'channel_type': 'channel'},
+                      'type': 'event_callback', 'event_id': 'Ev0192RQFLKF', 'event_time': 1597845654,
+                      'authed_users': ['U019RKRREKS']}
+
+# payload = dab_reaction_test
 # payload = reaction_added_test
+payload = name_reaction_test
 
 response = requests.post(url, json=payload)
