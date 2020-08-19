@@ -58,6 +58,8 @@ class SlackHelper:
                 timestamp=timestamp
             )
         except SlackApiError as sae:
+            print("SLACK API ERROR")
+            print(sae)
             pass
 
     def send_message(self, channel, text):
