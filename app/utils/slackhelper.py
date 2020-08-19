@@ -17,7 +17,7 @@ class SlackHelper:
     def text_in_msg(self, msg, text):
         if 'text' not in msg:
             return False
-
+        print(f"Parsing message: {msg['text'].lower()}")
         return text.lower() in msg['text'].lower()
 
     def name_or_mention_in_msg(self, msg, user):

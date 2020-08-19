@@ -9,15 +9,13 @@ challenge_test = {
 }
 
 dab_reaction_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id': 'T32H7A0LF', 'api_app_id': 'ANU4DL7EC',
-                     'event': {'client_msg_id': '55c51419-cf53-4c8d-99be-941469343117', 'type': 'message',
-                               'text': 'dab me test', 'user': 'U6U07M55E', 'ts': '1597842131.030300',
-                               'team': 'T32H7A0LF',
-                               'blocks': [{'type': 'rich_text', 'block_id': '+tOZS', 'elements': [
-                                   {'type': 'rich_text_section',
-                                    'elements': [{'type': 'text', 'text': 'dab me test'}]}]}],
-                               'channel': 'C019MGFAXS4', 'event_ts': '1597842131.030300', 'channel_type': 'channel'},
-                     'type': 'event_callback', 'event_id': 'Ev018PAAA2PR', 'event_time': 1597842131,
-                     'authed_users': ['U019RKRREKS']}
+                     'event': {'client_msg_id': '9f024765-091c-4c69-9221-9f92437a6364', 'type': 'message',
+                               'text': 'cmon dab me fam', 'user': 'U6U07M55E', 'ts': '1597844798.032400',
+                               'team': 'T32H7A0LF', 'blocks': [{'type': 'rich_text', 'block_id': 'gHn', 'elements': [
+                             {'type': 'rich_text_section',
+                              'elements': [{'type': 'text', 'text': 'cmon dab me fam'}]}]}], 'channel': 'C019MGFAXS4',
+                               'event_ts': '1597844798.032400', 'channel_type': 'channel'}, 'type': 'event_callback',
+                     'event_id': 'Ev019ABH4XCL', 'event_time': 1597844798, 'authed_users': ['U019RKRREKS']}
 
 many_reaction_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id': 'T32H7A0LF', 'api_app_id': 'ANU4DL7EC',
                       'event': {'client_msg_id': '19db0039-2264-417f-b2f0-c634d181941e', 'type': 'message',
@@ -35,7 +33,7 @@ reaction_added_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id': 'T32H7A0L
                        'type': 'event_callback', 'event_id': 'Ev01945ANCM8', 'event_time': 1597844233,
                        'authed_users': ['U019RKRREKS']}
 
-# payload = many_reaction_test
-payload = reaction_added_test
+payload = dab_reaction_test
+# payload = reaction_added_test
 
 response = requests.post(url, json=payload)
