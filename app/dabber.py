@@ -56,6 +56,9 @@ def dab_add_to_emoji(request):
 
 
 def dab(request):
+    if 'bot_id' in request:
+        return
+
     print(f"Request type: {request['type']}")
     if request['type'] == 'message':
         dab_message_response(request)

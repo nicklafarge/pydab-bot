@@ -43,8 +43,29 @@ name_reaction_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id': 'T32H7A0LF
                       'type': 'event_callback', 'event_id': 'Ev0192RQFLKF', 'event_time': 1597845654,
                       'authed_users': ['U019RKRREKS']}
 
+edited_message_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id': 'T32H7A0LF', 'api_app_id': 'ANU4DL7EC',
+                       'event': {'type': 'message', 'subtype': 'message_changed', 'hidden': True,
+                                 'message': {'client_msg_id': '8721e910-0e42-41ac-9da1-cd75b3fbefe1', 'type': 'message',
+                                             'text': 'research group', 'user': 'U6U07M55E', 'team': 'T32H7A0LF',
+                                             'edited': {'user': 'U6U07M55E', 'ts': '1597845926.000000'}, 'blocks': [
+                                         {'type': 'rich_text', 'block_id': 'UqSo', 'elements': [
+                                             {'type': 'rich_text_section',
+                                              'elements': [{'type': 'text', 'text': 'research group'}]}]}],
+                                             'ts': '1597845919.036900', 'source_team': 'T32H7A0LF',
+                                             'user_team': 'T32H7A0LF'}, 'channel': 'C019MGFAXS4',
+                                 'previous_message': {'client_msg_id': '8721e910-0e42-41ac-9da1-cd75b3fbefe1',
+                                                      'type': 'message', 'text': 'research grou', 'user': 'U6U07M55E',
+                                                      'ts': '1597845919.036900', 'team': 'T32H7A0LF', 'blocks': [
+                                         {'type': 'rich_text', 'block_id': 'sHUJ', 'elements': [
+                                             {'type': 'rich_text_section',
+                                              'elements': [{'type': 'text', 'text': 'research grou'}]}]}]},
+                                 'event_ts': '1597845926.037100', 'ts': '1597845926.037100', 'channel_type': 'channel'},
+                       'type': 'event_callback', 'event_id': 'Ev019GS1SQSD', 'event_time': 1597845926,
+                       'authed_users': ['U019RKRREKS']}
+
 # payload = dab_reaction_test
 # payload = reaction_added_test
-payload = name_reaction_test
+# payload = name_reaction_test
+payload = edited_message_test
 
 response = requests.post(url, json=payload)
