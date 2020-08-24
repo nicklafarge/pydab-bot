@@ -32,6 +32,10 @@ sh = SlackHelper()
 def dab_message_response(request):
     channel = request['channel']
 
+    kwargs = dict()
+    if 'thread_ts' in request:
+        kwargs['thread_ts'] = request['thread_ts']
+        
     for user in users:
         if user.reaction_type == ReactionType.ALL or user.reaction_type == ReactionType.ONLY_MENTIONS:
             if sh.name_or_mention_in_msg(request, user):
@@ -45,7 +49,7 @@ def dab_message_response(request):
         for trigger in msg_trigger.triggers:
             if sh.text_in_msg(request, trigger):
                 if msg_trigger.trigger_type == TriggerType.MESSAGE:
-                    sh.send_message(channel, msg_trigger.response, thread_ts=request['thread_ts'])
+                    sh.send_message(channel, msg_trigger.response, **kwargs)
                 elif msg_trigger.trigger_type == TriggerType.REACTION:
                     sh.add_reaction(channel, request['ts'], msg_trigger.response)
 
