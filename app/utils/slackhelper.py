@@ -74,8 +74,9 @@ class SlackHelper:
             print(sae)
             pass
 
-    def send_message(self, channel, text):
+    def send_message(self, channel, text, **kwargs):
         return self.client.chat_postMessage(
             channel=channel,
-            text=text
+            text=text,
+            **kwargs
         )

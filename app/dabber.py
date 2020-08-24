@@ -3,7 +3,8 @@ from datetime import datetime
 from app.utils.slackhelper import SlackHelper
 
 users = [
-    User('kenza', 'U4W8VP1MK', 'kenza-dab', ['k dawg', 'k-dawg', 'boudad', 'kempa', 'kenga']),
+    User('kenza', 'U4W8VP1MK', 'kenza-dab',
+         ['k dawg', 'k-dawg', 'boudad', 'kempa', 'kenga', 'kemba', 'kenda', 'kenba', 'kemda']),
     User('andrew_cox', None, 'andrew-cox-dab', ['andrew', 'cox']),
     User('robert', 'U4N22D1JL', 'bobby-earl-dab', ['bobby earl', 'bobby-earl', 'pritchett']),
     User('brian', 'U4NMUFLF5', 'brian-dab', ['mccarthy']),
@@ -44,7 +45,7 @@ def dab_message_response(request):
         for trigger in msg_trigger.triggers:
             if sh.text_in_msg(request, trigger):
                 if msg_trigger.trigger_type == TriggerType.MESSAGE:
-                    sh.send_message(channel, msg_trigger.response)
+                    sh.send_message(channel, msg_trigger.response, thread_ts=request['thread_ts'])
                 elif msg_trigger.trigger_type == TriggerType.REACTION:
                     sh.add_reaction(channel, request['ts'], msg_trigger.response)
 
