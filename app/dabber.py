@@ -14,7 +14,8 @@ users = [
     User('ash', None, 'ash-dab', ['das']),
     User('matt', None, 'matt-dab', ['bollinger']),
 
-    User('juan', 'U6RAXQNSF', 'jor', ['jor', 'ojeda romero'], reaction_type=ReactionType.ALL),
+    User('juan', 'U6RAXQNSF', 'jor', ['jor', 'ojeda romero'], reaction_type=ReactionType.ALL,
+         exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero']),
     User('rj', 'U6R3PLNJC', 'power', ['rolfe', 'power']),
 ]
@@ -35,7 +36,7 @@ def dab_message_response(request):
     kwargs = dict()
     if 'thread_ts' in request:
         kwargs['thread_ts'] = request['thread_ts']
-        
+
     for user in users:
         if user.reaction_type == ReactionType.ALL or user.reaction_type == ReactionType.ONLY_MENTIONS:
             if sh.name_or_mention_in_msg(request, user):

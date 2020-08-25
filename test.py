@@ -76,9 +76,12 @@ research_group_in_comment_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id'
                                             'channel_type': 'channel'}, 'type': 'event_callback',
                                   'event_id': 'Ev0196RX6R7Y', 'event_time': 1598290457, 'authed_users': ['U019RKRREKS']}
 
+jp_test = {'token': 'gm6yRCbGgSePVPtZBErknAQh', 'team_id': 'T32H7A0LF', 'api_app_id': 'ANU4DL7EC', 'event': {'client_msg_id': '9cb32ec1-5ab7-48c0-8e71-0858855bef90', 'type': 'message', 'text': 'juan-pablo test', 'user': 'U6U07M55E', 'ts': '1598395741.004900', 'team': 'T32H7A0LF', 'blocks': [{'type': 'rich_text', 'block_id': 'BJwRj', 'elements': [{'type': 'rich_text_section', 'elements': [{'type': 'text', 'text': 'juan-pablo test'}]}]}], 'channel': 'C019MGFAXS4', 'event_ts': '1598395741.004900', 'channel_type': 'channel'}, 'type': 'event_callback', 'event_id': 'Ev019ABFFYNA', 'event_time': 1598395741, 'authed_users': ['U019RKRREKS']}
+
 # payload = dab_reaction_test
 # payload = reaction_added_test
 # payload = name_reaction_test
-payload = research_group_in_comment_test
+# payload = research_group_in_comment_test
+payload = jp_test
 
 response = requests.post(url, json=payload)

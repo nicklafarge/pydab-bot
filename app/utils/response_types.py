@@ -11,13 +11,13 @@ class TriggerType:
 
 
 class User:
-    def __init__(self, name, user_id, emoji, aliases=None, reaction_type=ReactionType.ONLY_MENTIONS):
+    def __init__(self, name, user_id, emoji, aliases=None, reaction_type=ReactionType.ONLY_MENTIONS, exclusions=None):
         self.name = name
         self.id = user_id
         self.emoji = emoji
         self.aliases = aliases if aliases is not None else []
         self.reaction_type = reaction_type
-
+        self.exclusions = exclusions if exclusions else []
 
 class MessageTrigger:
     def __init__(self, triggers, response, trigger_type=TriggerType.MESSAGE):

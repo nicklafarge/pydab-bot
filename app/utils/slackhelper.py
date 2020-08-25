@@ -39,6 +39,11 @@ class SlackHelper:
 
         msg_text = msg['text'].lower()
 
+        # Does the text contain any of the exclusion criteria?
+        for exclusion in user.exclusions:
+            if exclusion.lower() in msg_text:
+                return False
+
         # Does the text contain the user's name or alias?
         if user.name in msg_text or any([a in msg_text for a in user.aliases]):
             return True
