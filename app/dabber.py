@@ -16,7 +16,7 @@ users = [
 
     User('juan', 'U6RAXQNSF', 'jor', ['jor', 'ojeda romero'], reaction_type=ReactionType.ALL,
          exclusions=['Juan Pablo', 'Juan-Pablo']),
-    User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero']),
+    User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero'], exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('rj', 'U6R3PLNJC', 'power', ['rolfe', 'power']),
 ]
 
