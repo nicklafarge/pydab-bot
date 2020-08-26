@@ -23,7 +23,7 @@ users = [
 
 message_triggers = [
     MessageTrigger(['research group'],
-                   ':kenza-dab::andrew-cox-dab::bobby-earl-dab::brian-dab::juan-dab::emily-dab:'
+                   ':kenza-dab::andrew-cox-dab::bobby-earl-dab::brian-dab::beom-dab::juan-dab::emily-dab:'
                    ':ted-dab::nick-dab::a'
                    'sh-dab::matt-dab:',
                    trigger_type=TriggerType.MESSAGE),
