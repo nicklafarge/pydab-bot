@@ -5,7 +5,7 @@ from app.utils.slackhelper import SlackHelper
 users = [
     User('kenza', 'U4W8VP1MK', 'kenza-dab',
          ['k dawg', 'k-dawg', 'boudad', 'kempa', 'kenga', 'kemba', 'kenda', 'kenba', 'kemda']),
-    User('andrew_cox', None, 'andrew-cox-dab', ['andrew', 'cox']),
+    User('andrew_cox', None, 'andrew-cox-dab', ['andrew the elder', 'cox']),
     User('robert', 'U4N22D1JL', 'bobby-earl-dab', ['bobby earl', 'bobby-earl', 'pritchett']),
     User('brian', 'U4NMUFLF5', 'brian-dab', ['mccarthy']),
     User('emily', 'U4PDMLWAW', 'emily-dab', ['e dawg', 'e-dawg', 'spreen']),
