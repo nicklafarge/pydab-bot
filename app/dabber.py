@@ -27,7 +27,9 @@ message_triggers = [
                    ':ted-dab::nick-dab::a'
                    'sh-dab::matt-dab:',
                    trigger_type=TriggerType.MESSAGE),
-    MessageTrigger(['dab', '@u019rkrreks'], 'squiddab', trigger_type=TriggerType.REACTION)
+    MessageTrigger(['dab', '@u019rkrreks'], 'squiddab', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['graduation', 'defense', 'defend'], 'magi-kenza-dab', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['graduation', 'defense', 'defend'], 'magi-brian-dab', trigger_type=TriggerType.REACTION),
 ]
 
 users_dict = {u.name: u for u in users}
