@@ -30,6 +30,12 @@ message_triggers = [
     MessageTrigger(['dab', '@u019rkrreks'], 'squiddab', trigger_type=TriggerType.REACTION),
     MessageTrigger(['graduation', 'defense', 'defend'], 'magi-kenza-dab', trigger_type=TriggerType.REACTION),
     MessageTrigger(['graduation', 'defense', 'defend'], 'magi-brian-dab', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['joey'], 'joey', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['charlie', 'wagon'], 'chuckwagon', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['roxy', 'roxstar'], 'roxstar', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['sherpa'], 'sherpa', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['bean'], 'thosbeans', trigger_type=TriggerType.REACTION),
+
 ]
 
 users_dict = {u.name: u for u in users}
