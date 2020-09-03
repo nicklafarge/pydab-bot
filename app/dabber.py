@@ -34,7 +34,8 @@ message_triggers = [
     MessageTrigger(['charlie', 'wagon'], 'chuckwagon', trigger_type=TriggerType.REACTION),
     MessageTrigger(['roxy', 'roxstar'], 'roxstar', trigger_type=TriggerType.REACTION),
     MessageTrigger(['sherpa'], 'sherpa', trigger_type=TriggerType.REACTION),
-    MessageTrigger(['bean', 'coffee', 'latte', '3bs'], 'thosbeans', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['lucy'], 'lucy', trigger_type=TriggerType.REACTION),
+    MessageTrigger(['mischief'], 'lucyintheskywithdiamonds', trigger_type=TriggerType.REACTION),
 
 ]
 
