@@ -9,11 +9,10 @@ users = [
     User('robert', None, 'bobby-earl-dab', ['bobby earl', 'bobby-earl', 'pritchett']),
     User('brian', 'U4NMUFLF5', 'brian-dab', ['mccarthy']),
     User('emily', 'U4PDMLWAW', 'emily-dab', ['e dawg', 'e-dawg', 'spreen']),
-    User('ted', None, 'ted-dab', ['wahl', 'theodore']),
+    User(' ted', None, 'ted-dab', ['wahl', 'theodore']),
     User('nick', 'U6U07M55E', 'nick-dab', ['lafarge']),
     User('ash', None, 'ash-dab', ['das'], exclusions=['trash']),
     User('matt', None, 'matt-dab', ['bollinger']),
-
     User('juan', 'U6RAXQNSF', 'jor', ['jor', 'ojeda romero'], reaction_type=ReactionType.ALL,
          exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero'], exclusions=['Juan Pablo', 'Juan-Pablo']),
