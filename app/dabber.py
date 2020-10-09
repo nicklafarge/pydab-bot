@@ -23,8 +23,7 @@ users = [
 message_triggers = [
     MessageTrigger(['research group'],
                    ':kenza-dab::andrew-cox-dab::bobby-earl-dab::brian-dab::beom-dab::juan-dab::emily-dab:'
-                   ':ted-dab::nick-dab::a'
-                   'sh-dab::matt-dab:',
+                   ':ted-dab::nick-dab::ash-dab::matt-dab:',
                    trigger_type=TriggerType.MESSAGE),
     MessageTrigger(['dab', '@u019rkrreks'], 'squiddab', trigger_type=TriggerType.REACTION),
     MessageTrigger(['graduation', 'defense', 'defend'], 'magi-kenza-dab', trigger_type=TriggerType.REACTION),
@@ -36,6 +35,7 @@ message_triggers = [
     MessageTrigger(['bean', 'coffee', 'latte', '3bs'], 'thosbeans', trigger_type=TriggerType.REACTION),
     MessageTrigger(['lucy'], 'lucy', trigger_type=TriggerType.REACTION),
     MessageTrigger(['mischief'], 'lucyintheskywithdiamonds', trigger_type=TriggerType.REACTION),
+    MessageTrigger([':f:'], 'f', trigger_type=TriggerType.REACTION),
 ]
 
 users_dict = {u.name: u for u in users}
