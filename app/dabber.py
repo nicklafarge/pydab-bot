@@ -17,7 +17,7 @@ users = [
          exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero'], exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('rj', 'U6R3PLNJC', 'power', ['rolfe', 'power']),
-    User('stephen', 'UHLTCF8J3', 'stephen-dab', ['scheuerle', 'blt'])
+    User('stephen', 'UHLTCF8J3', 'stephen-dab', ['scheuerle', 'blt', 'tactical', 'steve'])
 ]
 
 message_triggers = [
