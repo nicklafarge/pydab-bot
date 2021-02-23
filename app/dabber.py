@@ -17,12 +17,12 @@ users = [
          exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero'], exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('rj', 'U6R3PLNJC', 'power', ['rolfe', 'power']),
-    User('beom', 'UHLTCF8J3', 'beom-dab', ['park'])
+    User('stephen', 'UHLTCF8J3', 'stephen-dab', ['scheuerle', 'blt'])
 ]
 
 message_triggers = [
     MessageTrigger(['research group'],
-                   ':kenza-dab::andrew-cox-dab::bobby-earl-dab::brian-dab::beom-dab::juan-dab::emily-dab:'
+                   ':kenza-dab::andrew-cox-dab::stephen-dab::bobby-earl-dab::brian-dab::beom-dab::juan-dab::emily-dab:'
                    ':ted-dab::nick-dab::ash-dab::matt-dab:',
                    trigger_type=TriggerType.MESSAGE),
     MessageTrigger(['dab', '@u019rkrreks'], 'squiddab', trigger_type=TriggerType.REACTION),
