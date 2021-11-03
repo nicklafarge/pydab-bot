@@ -17,13 +17,17 @@ users = [
          exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero'], exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('rj', 'U6R3PLNJC', 'power', ['rolfe', 'power']),
-    User('beom', 'UHLTCF8J3', 'beom-dab', ['park'])
+    User('beom', 'UHLTCF8J3', 'beom-dab', ['park']),
+    User('jp', '', 'jp-dab', ['juan-pablo', 'juan pablo']),
+    User('mitch', '', 'mitch-dab', ['dominguez']),
+    User('alex', '', 'alex-dab', ['hoffman']),
+    User('maaninee', '', 'maaninee-dab', ['gupta']),
 ]
 
 message_triggers = [
     MessageTrigger(['research group'],
-                   ':kenza-dab::andrew-cox-dab::bobby-earl-dab::brian-dab::beom-dab::juan-dab::emily-dab:'
-                   ':ted-dab::nick-dab::ash-dab::matt-dab:',
+                   ':kenza-dab::andrew-cox-dab::bobby-earl-dab::brian-dab::mitch-dab::beom-dab::juan-dab:'
+                   ':emily-dab::ted-dab::nick-dab::maaninee_dab::ash-dab::jp-dab: :matt-dab:  :alex-dab:',
                    trigger_type=TriggerType.MESSAGE),
     MessageTrigger(['dab', '@u019rkrreks'], 'squiddab', trigger_type=TriggerType.REACTION),
     MessageTrigger(['graduation', 'defense', 'defend'], 'magi-kenza-dab', trigger_type=TriggerType.REACTION),
