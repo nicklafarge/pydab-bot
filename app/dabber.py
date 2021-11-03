@@ -18,10 +18,10 @@ users = [
     User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero'], exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('rj', 'U6R3PLNJC', 'power', ['rolfe', 'power']),
     User('beom', 'UHLTCF8J3', 'beom-dab', ['park']),
-    User('jp', '', 'jp-dab', ['juan-pablo', 'juan pablo']),
-    User('mitch', '', 'mitch-dab', ['dominguez']),
-    User('alex', '', 'alex-dab', ['hoffman']),
-    User('maaninee', '', 'maaninee-dab', ['gupta']),
+    User('jp', 'U01A2P8D1RN', 'jp-dab', ['juan-pablo', 'juan pablo']),
+    User('mitch', 'U014SJGP9D1', 'mitch-dab', ['dominguez']),
+    User('alex', 'U019K40U9M2', 'alex-dab', ['hoffman']),
+    User('maaninee', 'UCFJFBKFS', 'maaninee-dab', ['gupta']),
 ]
 
 message_triggers = [
