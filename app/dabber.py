@@ -23,6 +23,8 @@ users = [
     User('alex', 'U019K40U9M2', 'alex-dab', ['hoffman']),
     User('maaninee', 'UCFJFBKFS', 'maaninee-dab', ['gupta']),
     User('noah', 'U01A2P8EQQG', 'noah-dab', ['sadaka', 'canada']),
+    User('ricardo', 'UHL0L9QTF', 'ricardo-dab', ['gomez']),
+    User('dale', 'U02D876E4JY', 'dale-dab', ['williams']),
 ]
 
 message_triggers = [
