@@ -29,8 +29,8 @@ users = [
 
 message_triggers = [
     MessageTrigger(['research group'],
-                   ':kenza-dab::andrew-cox-dab::bobby-earl-dab::brian-dab::mitch-dab::beom-dab::juan-dab:'
-                   ':emily-dab::ted-dab::nick-dab::maaninee-dab::ash-dab::jp-dab: :matt-dab:  :alex-dab:',
+                   ':kenza-dab::andrew-cox-dab::bobby-earl-dab::brian-dab::mitch-dab::ricardo-dab::beom-dab::juan-dab::dale-dab:'
+                   ':emily-dab::ted-dab::nick-dab::maaninee-dab::ash-dab::jp-dab: :matt-dab::alex-dab::noah-dab:',
                    trigger_type=TriggerType.MESSAGE),
     MessageTrigger(['dab', '@u019rkrreks'], 'squiddab', trigger_type=TriggerType.REACTION),
     MessageTrigger(['graduation', 'defense', 'defend'], 'magi-kenza-dab', trigger_type=TriggerType.REACTION),
