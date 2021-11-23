@@ -18,17 +18,20 @@ users = [
     User('juandab', 'U6RAXQNSF', 'juan-dab', ['juan', 'jor', 'ojeda romero'], exclusions=['Juan Pablo', 'Juan-Pablo']),
     User('rj', 'U6R3PLNJC', 'power', ['rolfe', 'power']),
     User('beom', 'UHLTCF8J3', 'beom-dab', ['park']),
-    User('jp', '', 'jp-dab', ['juan-pablo', 'juan pablo']),
-    User('mitch', '', 'mitch-dab', ['dominguez']),
-    User('alex', '', 'alex-dab', ['hoffman']),
-    User('maaninee', '', 'maaninee-dab', ['gupta']),
-    User('stephen', 'UHLTCF8J3', 'stephen-dab', ['scheuerle', 'blt', 'tactical', 'steve'])
+    User('jp', 'U01A2P8D1RN', 'jp-dab', ['juan-pablo', 'juan pablo']),
+    User('mitch', 'U014SJGP9D1', 'mitch-dab', ['dominguez']),
+    User('alex', 'U019K40U9M2', 'alex-dab', ['hoffman']),
+    User('maaninee', 'UCFJFBKFS', 'maaninee-dab', ['gupta']),
+    User('stephen', 'UHLTCF8J3', 'stephen-dab', ['scheuerle', 'blt', 'tactical', 'steve']),
+    User('noah', 'U01A2P8EQQG', 'noah-dab', ['sadaka', 'canada']),
+    User('ricardo', 'UHL0L9QTF', 'ricardo-dab', ['gomez']),
+    User('dale', 'U02D876E4JY', 'dale-dab', ['williams']),
 ]
 
 message_triggers = [
     MessageTrigger(['research group'],
-                   ':kenza-dab::andrew-cox-dab::stephen-dab::bobby-earl-dab::brian-dab::mitch-dab::beom-dab::juan-dab:'
-                   ':emily-dab::ted-dab::nick-dab::maaninee_dab::ash-dab::jp-dab: :matt-dab:  :alex-dab:',
+                   ':kenza-dab::andrew-cox-dab::stephen-dab::bobby-earl-dab::brian-dab::mitch-dab::ricardo-dab::beom-dab::juan-dab::dale-dab:'
+                   ':emily-dab::ted-dab::nick-dab::maaninee-dab::ash-dab::jp-dab: :matt-dab::alex-dab::noah-dab:',
                    trigger_type=TriggerType.MESSAGE),
     MessageTrigger(['dab', '@u019rkrreks'], 'squiddab', trigger_type=TriggerType.REACTION),
     MessageTrigger(['graduation', 'defense', 'defend'], 'magi-kenza-dab', trigger_type=TriggerType.REACTION),
